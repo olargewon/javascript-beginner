@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow-loop</title>
+</head>
+<body>
+    <script>
+        /*
+        //while迴圈
+        let n=0;
+        while(n<5){
+            console.log(n);
+            n++;
+        }
+        //for迴圈
+        for(let n=2;n<9;n+=2){
+            console.log(n);
+        }
+        //從1加到10
+        let result=0;
+        for(let n=1;n<=10;n++){
+            result+=n;
+        }
+        console.log(result);
+        //for結合if
+        let frequency = {}; 
+        for(let letter of "mississippi") { 
+            console.log(letter);
+            console.log(frequency[letter]);
+            if (frequency[letter]) { 
+                frequency[letter]++; 
+            } else { frequency[letter] = 1; 
+            } 
+        }
+        console.log(frequency) // => {m: 1, i: 4, s: 4, p: 2}
+        */
+        let text = "Na na na na na na na na Batman!"; 
+        let wordSet = new Set(text.split(" ")); 
+        let unique = []; 
+        for(let word of wordSet) {
+            console.log(wordSet); 
+            console.log(word);
+            unique.push(word); 
+        }
+        console.log(unique) // => ["Na", "na", "Batman!"]
+
+        let m = new Map([["name", "one"]]); 
+            for(let [key, value] of m) { 
+                console.log(key); // => 1 
+                console.log(value); // => "one" 
+            }
+    </script>
+</body>
+</html>

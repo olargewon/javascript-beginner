@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //break 指令
+        let n=0;
+        while(n<5){
+            if(n==3){
+                break;                    
+            }  
+            console.log(n);
+                n++;           
+        }
+        //continue 指令
+        for(let n=0;n<5;n++){
+            if(n%2==0){
+                continue;
+            }
+            console.log(n);        
+        }
+        */
+        /*
+        let o = { x: 1, y: 2, z: 3 }; 
+        let a = [], i = 0; 
+        for(a[i++] in o) {// empty 
+            console.log(i);
+            console.log(a);//注意a的變化
+        }
+        for(let i in a) console.log(i);// "0", "1", "2"
+        */
+
+        // 在 原型鍊上 新增function
+        Object.prototype.objCustom = function(){}; //物件 原型鋉
+        Array.prototype.arrCustom = function(){};  //陣列 原型鋉
+        let iterable = [3, 5, 7];
+        iterable.foo='hello';//新增foo的屬性名稱
+        // 回傳「key」
+        for (let i in iterable) {
+        console.log(i); // "0", "1", "2" ,"foo", "arrCuston", "objCustom"
+        }
+        // 回傳「value」
+        for (let i of iterable) {
+        console.log(i); // 3, 5, 7
+        }
+
+    </script>
+</body>
+</html>
