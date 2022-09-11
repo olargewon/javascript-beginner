@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript HTML DOM 核心觀念</title>
+</head>
+<body>
+    <script>
+        //認識內建的window物件（HTML DOM最上層）
+        console.log(window);
+        //取得視窗寬度與高度
+        console.log(window.innerWidth,window.innerHeight);
+        //取得螢幕寬度與高度
+        console.log(window.screen.width,window.screen.height);
+        //取得網址內容
+        console.log(window.location.href);
+        //變更網址內容
+        //window.location.href="https://www.google.com";
+        //認識document
+        console.log(document);
+        console.dir(window.document);
+        //取得標題內容
+        console.log(document.title);
+        //更改標題內容
+        document.title="新標題";
+        //認識body
+        console.log(document.body);
+        //內文內容
+        console.log(document.body.innerHTML);
+        //變更內文內容
+        document.body.innerHTML="Hello HTML DOM.";
+
+    </script>
+</body>
+</html>

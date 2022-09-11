@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM網頁操作</title>
+    <style>
+        .text{
+            text-decoration:underline;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>HTML DOM網頁操作</h3>
+    <div id="content">HTML DOM網頁操作的流程</div>
+    <hr>
+    <button onclick="change();">點我</button>
+    <script>
+        function change(){
+            let msg=document.querySelector("#content");
+            console.log(msg);
+            msg.innerHTML="對特定的標簽做操作";
+            msg.className="text";
+            msg.style.fontSize="30px";
+            msg.style.color="red";
+        }
+    </script>
+    
+    <!--
+    <div>
+        <span onclick="changeToAbout();">關於我</span>
+        <span onclick="changToExp();">學經歷</span>
+    </div>
+    <hr>
+    <div id="about">大家好, 我是Olargewon.</div>
+    <div id="exp" style="display:none">交大畢業, 主要從是業務銷售.</div>
+    <script>
+        function changeToAbout(){
+            //先取得標簽
+            let a=document.querySelector("#about");
+            let e=document.querySelector("#exp");
+            //對標簽進行操作
+            a.style.display="block";
+            e.style.display="none";
+        }
+        function changToExp(){
+            //先取得標簽
+            let a=document.querySelector("#about");
+            let e=document.querySelector("#exp");
+            //對標簽進行操作
+            a.style.display="none";
+            e.style.display="block";
+        }
+    </script>
+    -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 陣列物件</title>
+</head>
+<body>
+    <script>
+        //建立陣列
+        let grades=[70,50,84];
+        grades.push(44);
+        grades.push(100);
+        console.log(grades);
+        console.log(grades[0]);
+        console.log(grades[1]);
+        console.log(grades[2]);
+        console.log(grades[3]);
+        console.log(grades[4]);
+        //算平均值
+        let sum=0;
+        for(let i=0;i<grades.length;i++){
+            sum+=grades[i];
+        }
+        console.log(sum);
+        let avg=sum/grades.length;
+        console.log(avg);
+
+    </script>
+</body>
+</html>

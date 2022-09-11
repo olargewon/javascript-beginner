@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件的建立, 包含JSON物件</title>
+</head>
+<body>
+    <script>
+        //建立新物件 
+        let test=new Object();
+        test.x=3;
+        test.y=4;
+        test.show=function(){
+            console.log("Hello");
+        }
+        test.show()
+        //建立新物件 2
+        let man=new Object();
+        man.age=53;
+        man.name="大明";
+        man.talk=function(){
+            console.log("Hell, 我是",this.name,"今年",this.age);
+        };
+        console.log(man);
+        console.log(man.age>=20);
+        man.talk();
+         //建立新物件 json
+         let girl={
+            age:18,
+            name:"小荳",
+            say:function(){
+                console.log("Hell, 我是",this.name,"今年",this.age);
+            }
+        };
+        console.log(girl);
+        console.log(girl.age>=20);
+        girl.say();
+    </script>
+</body>
+</html>
