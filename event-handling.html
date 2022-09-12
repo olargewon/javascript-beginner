@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 事件處理</title>
+    <style>
+        .btn{
+            font-family:"微軟正黑體";
+            padding:10px;
+            border-radius: 5px;
+            background-color:#ffcccc;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>事件處理的練習</h3>
+    <!--
+    <button
+        onclick="console.log('點擊事件')"
+        onmouseover="console.log('滑鼠移入')"
+        onmouseout="console.log('滑鼠移出')"
+        onmousedown="console.log('滑鼠按下')"
+        onmouseup="console.log('滑鼠放開')"
+    >點我吧</button>
+    -->
+    <span class="btn"
+        onmouseover="over(this);"
+        onmouseout="out(this);"
+        onmousedown="down(this);"
+        onmouseup="up(this);"
+    >第一個按鈕</span>
+    <span class="btn"
+        onmouseover="over(this);"
+        onmouseout="out(this);"
+        onmousedown="down(this);"
+        onmouseup="up(this);"
+    >第二個按鈕</span>
+</body>
+    <script>
+        function over(elem){
+            elem.style.backgroundColor="pink";
+        }
+        function out(elem){
+            elem.style.backgroundColor="#ffcccc";
+        }
+        function down(elem){
+            elem.style.fontWeight="bold";
+        }
+        function up(elem){
+            elem.style.fontWeight="normal";
+        }
+    </script>
+</html>

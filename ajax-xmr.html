@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX and XMR網路連線實務操作</title>
+</head>
+<body>
+    <h3>AJAX and XMR網路連線練習</h3>
+    <hr>
+    <button onclick="getData();">取得連線資料</button>
+    <div id="result"></div>
+    <script>
+        //https://cwpeng.github.io/live-records-samples/data/products.json
+            function getData(){
+                fetch("https://cwpeng.github.io/live-records-samples/data/products.json").then(function(response){
+                    return response.json();
+                }).then(function(data){
+                    let result=document.querySelector("#result");
+                    result.innerHTML="";
+                    for(let i=0;i<data.length;i++){
+                        let product=data[i];
+                        result.innerHTML+="<div>"+product.name+","+product.price+","+product.description+"</div>";
+                    }
+                })
+            }
+    </script>
+</body>
+</html>
